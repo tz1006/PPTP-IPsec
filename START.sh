@@ -2,13 +2,13 @@
 yum -y install git wget
 git clone https://github.com/tz1006/PPTP-IPsec.git ~/PPTP-IPsec
 
-# Intall PPTP
+# Install PPTP
 yum install -y pptpd
 \cp -f ~/PPTP-IPsec/options.pptpd /etc/ppp/options.pptpd
 \cp -f ~/PPTP-IPsec/chap-secrets /etc/ppp/chap-secrets
 \cp -f ~/PPTP-IPsec/pptpd.conf /etc/pptpd.conf
 
-# IPsec
+# Install IPsec
 yum -y install strongswan
 # rm -rf /etc/strongswan/ipsec.conf /etc/strongswan/ipsec.secrets /etc/strongswan/strongswan.conf
 \cp -f ~/PPTP-IPsec/ipsec.conf /etc/strongswan/ipsec.conf
