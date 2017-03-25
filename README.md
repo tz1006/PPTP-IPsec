@@ -21,8 +21,8 @@ iptables默认开启端口
 4500
 1700
 1723
-eth0
-编辑修改
+eth0  
+编辑修改  
 `vi /etc/sysconfig/iptables`
 ### 其他信息 ###
 连接后无法联网修改文件  
