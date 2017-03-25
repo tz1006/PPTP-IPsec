@@ -2,8 +2,8 @@
 PPTP和IPsec的配置文件以及一键安装脚本 for CentOS 6 在Vltur上完美测试
 *账号密码密钥默认都为vpn*
 ## 安装方法 ##
-两行代码
-`oral -O https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/VPN.sh`
+两行代码  
+`oral -O https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/VPN.sh`  
 `bash VPN.sh`
 ### PPTP默认设置 ###
 账号密码目录 `/etc/ppp/chap-secrets`
