@@ -7,6 +7,6 @@ yum -y install strongswan
 \cp -f /root/ipsec/ipsec.secrets /etc/strongswan/ipsec.secrets
 \cp -f /root/ipsec/strongswan.conf /etc/strongswan/strongswan.conf
 bash ~/ipsec/sysctl.sh
-bash ~/iptables.sh
+bash ~/ipsec/iptables.sh
 service strongswan start
 chkconfig strongswan on
