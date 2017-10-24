@@ -11,9 +11,9 @@ sudo cp -f ~/PPTP-IPsec/pptpd.conf /etc/pptpd.conf
 
 # Install IPsec
 sudo apt-get install -y strongswan
-sudo cp -f ~/PPTP-IPsec/ipsec.conf /etc/strongswan/ipsec.conf
-sudo cp -f ~/PPTP-IPsec/ipsec.secrets /etc/strongswan/ipsec.secrets
-sudo cp -f ~/PPTP-IPsec/strongswan.conf /etc/strongswan/strongswan.conf
+sudo cp -f ~/PPTP-IPsec/ipsec.conf /etc/ipsec.conf
+sudo cp -f ~/PPTP-IPsec/ipsec.secrets /etc/ipsec.secrets
+sudo cp -f ~/PPTP-IPsec/strongswan.conf /etc/strongswan.conf
 
 # Sysctl Config
 sudo sed -i 's/^net.ipv4.ip_forward.*/net.ipv4.ip_forward = 1/g' /etc/sysctl.conf
