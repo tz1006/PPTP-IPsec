@@ -20,8 +20,11 @@ sudo sed -i 's/^net.ipv4.ip_forward.*/net.ipv4.ip_forward = 1/g' /etc/sysctl.con
 sudo sysctl -p
 
 # Firewall
-sudo ufw allow 
-sudo ufw allow 
+sudo ufw allow 500
+sudo ufw allow 4500
+sudo ufw allow 4500
+sudo ufw allow 1701
+sudo ufw allow 1723
 
 # Start
 sudo service pptpd start
