@@ -1,7 +1,6 @@
 # iptables
 # vi /etc/sysconfig/iptables
 
-iptables -F
 iptables -X
 /sbin/iptables -I INPUT -i eth0 -p esp -j ACCEPT
 /sbin/iptables -I INPUT -p tcp --dport 1723 -j ACCEPT
