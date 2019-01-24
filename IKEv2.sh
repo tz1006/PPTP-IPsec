@@ -19,9 +19,9 @@ sudo certbot certonly --standalone --agree-tos \
                    -d ikev2.hakase-labs.io
 
 # Config Ipsec
-sudo wget  -O /etc/ipsec.secrets
+sudo wget https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/config/ipsec.conf -O /etc/ipsec.conf
 sudo wget  -O  /etc/strongswan.d/strongswan.conf
-
+sudo wget https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/config/ipsec.conf -O /etc/ipsec.secrets
 
 
 # Sysctl Config
