@@ -1,4 +1,4 @@
-# #!/bin/sh
+#!/bin/sh -e
 
 sudo ln -fs /lib/systemd/system/rc-local.service /etc/systemd/system/rc-local.service  
 
