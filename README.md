@@ -8,9 +8,6 @@ IKEv2 Ubuntu18
 IKEv2 Ubuntu16  
 `curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/IKEv2_ubuntu16.sh | bash`  
 
-两行代码  
-`oral -O https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/VPN.sh`  
-`bash VPN.sh`  
 ### PPTP默认设置 ###
 账号密码目录  
 `/etc/ppp/chap-secrets`
