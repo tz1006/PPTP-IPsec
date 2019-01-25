@@ -2,7 +2,8 @@
 
 
 # ----设定变量----
-domain = $(hostname)
+domain=$(hostname)
+IP=$(hostname -I)
 #NetCard=$(ifconfig|grep "^en"|awk '{print $1}')
 #NetCard=${NetCard::-1}
 NetCard=$(ls /sys/class/net/ |grep "^en")
@@ -14,14 +15,14 @@ NetCard=$(ls /sys/class/net/ |grep "^en")
 
 # Prerequisites
 sudo apt-get update -y
-sudo apt-get install -y strongswan certbot
+sudo apt-get install -y strongswan strongswan-pki certbot
 #sudo apt-get install -y sysv-rc-conf
 
 # Disable AppArmor
 #sudo systemctl stop apparmor
 #sudo systemctl disable apparmor
-sudo /etc/init.d/apparmor stop
-sudo update-rc.d -f apparmor remove
+#sudo /etc/init.d/apparmor stop
+#sudo update-rc.d -f apparmor remove
 
 # Apply Cert
 sudo certbot certonly --standalone --agree-tos \
@@ -45,7 +46,7 @@ sed -i '/net.ipv4.ip_forward/c net.ipv4.ip_forward = 1' /etc/sysctl.conf
 sudo sysctl -p
 
 # Firewall
-sudo iptables -X
+#sudo iptables -X
 sudo ufw allow 53
 sudo ufw allow 80
 sudo ufw allow 500
