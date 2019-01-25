@@ -15,7 +15,8 @@ NetCard=$(ls /sys/class/net/ |grep "^en")
 
 # Prerequisites
 sudo apt-get update -y
-sudo apt-get install -y strongswan strongswan-pki certbot
+sudo apt-get install -y strongswan strongswan-pki libcharon-standard-plugins libcharon-extra-plugins 
+sudo apt-get install -y certbot
 #sudo apt-get install -y sysv-rc-conf
 
 # Startup Script
