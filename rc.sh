@@ -9,3 +9,5 @@ sudo echo '#!/bin/sh -e
 exit 0' > /etc/rc.local
 
 sudo chmod 755 /etc/rc.local 
+
+# https://blog.csdn.net/dahuzix/article/details/80785691
