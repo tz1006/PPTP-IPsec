@@ -23,6 +23,7 @@ sudo systemctl disable apparmor
 #sudo update-rc.d -f apparmor remove
 
 # Apply Cert
+wget https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem -O /etc/ipsec.d/cacerts/cacert.pem
 sudo certbot certonly --standalone --agree-tos \
                    --no-eff-email \
                    --email example@gmail.com \
