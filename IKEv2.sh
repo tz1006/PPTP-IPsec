@@ -18,6 +18,9 @@ sudo apt-get update -y
 sudo apt-get install -y strongswan strongswan-pki certbot
 #sudo apt-get install -y sysv-rc-conf
 
+# Startup Script
+curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/rc.sh | bash 
+
 # Disable AppArmor
 #sudo systemctl stop apparmor
 #sudo systemctl disable apparmor
@@ -54,10 +57,10 @@ sudo ufw allow 4500
 sudo ufw allow 1701
 #sudo ufw allow 1723
 #iptables -t nat -A POSTROUTING -s 10.99.1.0/24 -j MASQUERADE
-
 iptables -t nat -A POSTROUTING -s 10.0.0.0/24 -j MASQUERADE
+sed '4 iptables -t nat -A POSTROUTING -s 10.0.0.0/24 -j MASQUERADE' -i /etc/rc.local
 
-sudo iptables -t nat -A POSTROUTING -o ens33 -j MASQUERADE
+#sudo iptables -t nat -A POSTROUTING -o ens33 -j MASQUERADE
 
 
 # restart
