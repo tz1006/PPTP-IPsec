@@ -2,7 +2,7 @@
 PPTP和IPsec的配置文件以及一键安装脚本 for CentOS 6 在Vltur上完美测试
 *账号密码密钥默认都为vpn*
 ## 安装方法 ##
-IKEv2 
+IKEv2  
 `curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/ikev2.sh | bash` 
 
 两行代码  
