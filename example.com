@@ -20,7 +20,11 @@ server
     
     location / {
         proxy_pass          https://proxy.com;
-        # proxy_set_header Accept-Encoding "";
         proxy_set_header Accept-Language "zh-CN"; 
+        #proxy_set_header Accept-Encoding "";
+        
+        #sub_filter_once off;
+        #sub_filter_types text/html;
+        #sub_filter 'Google' 'your_string';
     }
 }
