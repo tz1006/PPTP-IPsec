@@ -6,8 +6,9 @@ sudo apt install -y nginx
 
 curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/letsencrypt.sh | bash -s $1
 
-wget https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/example.com -O /etc/nginx/sites-enabled/example.com
 
+rm /etc/nginx/sites-enabled/default
+wget https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/example.com -O /etc/nginx/sites-enabled/example.com
 # Replace example.com
 sed -i "s/example.com/$1/g" /etc/nginx/sites-enabled/example.com
 # Replace proxy.com
