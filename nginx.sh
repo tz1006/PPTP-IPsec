@@ -1,7 +1,7 @@
 #!/bash/sh
 # 用法 bash nginx.sh  yourdomain.com proxy.com
 
-sudo apt -y update
+#sudo apt -y update
 sudo apt install -y nginx
 
 curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/letsencrypt.sh | bash -s $1
