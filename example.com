@@ -21,6 +21,6 @@ server
     location / {
         proxy_pass          https://proxy.com;
         # proxy_set_header Accept-Encoding "";
-        # proxy_set_header Accept-Language "zh-CN"; 
+        proxy_set_header Accept-Language "zh-CN"; 
     }
 }
