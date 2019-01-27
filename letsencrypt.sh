@@ -1,6 +1,8 @@
 #!/bash/sh
 # 用法 bash letsencrypt.sh $(hostname)
 
+service nginx stop
+
 OS_VERSION=$(lsb_release -r --short)
 VERSION=${OS_VERSION::2}
 if [ $VERSION == '18' ]
@@ -22,5 +24,6 @@ else
                    -n
 fi
 
+service nginx start
 
 #wget https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem -O /location
