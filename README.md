@@ -3,7 +3,7 @@ PPTP和IPsec的配置文件以及一键安装脚本 for CentOS 6 在Vltur上完�
 *账号密码密钥默认都为vpn*
 ## 安装方法 ##
 Let's Encrypt 证书   
-`curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/letsencrypt.sh | bash $(hostname)` 
+`curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/letsencrypt.sh | bash -s $(hostname)` 
 
 IKEv2 Ubuntu18  
 `curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/IKEv2.sh | bash`  
