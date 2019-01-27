@@ -4,7 +4,7 @@ server
     listen 443 ssl;
     #listen [::]:80 default_server;
     
-    # root /var/www/html;
+    root /var/www/example.com;
     server_name   example.com;
     # access_log   /var/log/nginx/example.com.log;
     
@@ -18,6 +18,11 @@ server
         return 301 https://$host$request_uri;
     }
     
+    location /static/ {
+        try_files $uri $uri/ =404;
+    }
+
+    
     location / {
         proxy_pass          https://proxy.com;
         proxy_set_header Accept-Language "zh-CN"; 
@@ -25,6 +30,7 @@ server
         
         #proxy_set_header Host $host;
         #proxy_set_header X-Real-IP $remote_addr;
+        #more_set_headers 'Access-Control-Allow-Origin: *';
         
         #sub_filter_once off;
         #sub_filter_types text/html;
