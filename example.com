@@ -11,7 +11,7 @@ server
     # RSA certificate
     ssl_certificate /etc/letsencrypt/live/example.com/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/example.com/privkey.pem;
-    include /etc/letsencrypt/options-ssl-nginx.conf
+    include /etc/letsencrypt/options-ssl-nginx.conf;
     
     # Redirect non-https traffic to https
     if ($scheme != "https") {
