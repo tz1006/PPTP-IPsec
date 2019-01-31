@@ -8,7 +8,6 @@ curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/letsencrypt.s
 
 
 rm /etc/nginx/sites-enabled/default
-#wget https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/example.com -O /etc/nginx/sites-enabled/example.com
 wget https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/nginx/example.com -O /etc/nginx/sites-enabled/example.com
 
 # Replace example.com
