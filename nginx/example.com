@@ -18,15 +18,6 @@ server
         return 301 https://$host$request_uri;
     }
 
-
-    location /example_dir/ {
-        #proxy_pass          https://website.com;
-        #proxy_set_header Host 'website.com';
-        #proxy_ssl_server_name on;
-        #more_set_headers 'Access-Control-Allow-Origin: *';
-        #try_files $uri $uri/ =404;
-    }
-
     location / {
         proxy_pass          https://website.com;
         proxy_set_header Accept-Language "zh-CN";
@@ -43,4 +34,10 @@ server
         #sub_filter_types *;
         #sub_filter 'website.com' 'example.com/static';
     }
+
+    #location /example_dir/ {
+    #    proxy_pass          https://website.com;
+    #    try_files $uri $uri/ =404;
+    #}
+
 }
