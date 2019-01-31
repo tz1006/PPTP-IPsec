@@ -29,6 +29,7 @@ server
 
         #proxy_ssl_server_name on;
         #proxy_ssl_session_reuse off;
+        #more_set_headers 'Access-Control-Allow-Origin: *';
 
         #sub_filter_once off;
         #sub_filter_types *;
