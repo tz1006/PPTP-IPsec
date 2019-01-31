@@ -14,7 +14,7 @@ wget https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/nginx/example.co
 # Replace example.com
 sed -i "s/example.com/$1/g" /etc/nginx/sites-enabled/example.com
 # Replace proxy.com
-sed -i "s/proxy.com/$2/g" /etc/nginx/sites-enabled/example.com
+sed -i "s/website.com/$2/g" /etc/nginx/sites-enabled/example.com
 
 # Rename example.com
 mv -f /etc/nginx/sites-enabled/example.com /etc/nginx/sites-enabled/$1
