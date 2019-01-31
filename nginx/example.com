@@ -38,6 +38,11 @@ server
         
     }
 
+    #location /dir  {
+    #    #return 301 https://www.website.com;
+    #    rewrite ^/(.*)$  https://www.website.com  permanent;
+    #}
+    
     #location /example_dir/ {
     #    proxy_pass          https://website.com;
     #    try_files $uri $uri/ =404;
