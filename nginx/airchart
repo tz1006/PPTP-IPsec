@@ -4,7 +4,7 @@ server
     listen 443;
     #listen [::]:80 default_server;
 
-    root /var/www/html;
+    root /var/www/example.com;
     server_name   example.com;
     # access_log   /var/log/nginx/example.com.log;
 
@@ -32,13 +32,15 @@ server
 
         #sub_filter_once off;
         #sub_filter_types *;
-        #sub_filter 'static.website.com' 'example.com/static';
+        #sub_filter 'website.com' 'example.com/static';
     }
 
     location /example_dir/ {
-        #proxy_pass          https://static.website.com;
-        #try_files $uri $uri/ =404;
+        #proxy_pass          https://website.com;
+        #proxy_set_header Host 'website.com';
+        #proxy_ssl_server_name on;
         #more_set_headers 'Access-Control-Allow-Origin: *';
+        #try_files $uri $uri/ =404;
     }
 
 }
