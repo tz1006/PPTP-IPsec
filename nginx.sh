@@ -16,5 +16,6 @@ sed -i "s/proxy.com/$2/g" /etc/nginx/sites-enabled/example.com
 
 # Rename example.com
 mv -f /etc/nginx/sites-enabled/example.com /etc/nginx/sites-enabled/$1
+mkdir /var/www/$1
 
 nginx -t && nginx -s reload
