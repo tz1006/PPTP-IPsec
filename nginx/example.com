@@ -1,6 +1,6 @@
 server
 {
-    listen 80 default_server;
+    listen 80;
     listen 443 ssl;
     #listen [::]:80 default_server;
     
