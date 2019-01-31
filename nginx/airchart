@@ -1,6 +1,6 @@
 server
 {
-    listen 80 ;
+    listen 80;
     listen 443;
     #listen [::]:80 default_server;
 
@@ -19,21 +19,26 @@ server
     }
 
     location / {
-        proxy_pass          https://airtable.com;
+        proxy_pass          https://website.com;
         proxy_set_header Accept-Language "zh-CN";
         proxy_set_header Accept-Encoding "";
         
         #proxy_set_header Host $host;
         #proxy_set_header X-Real-IP $remote_addr;
+        #proxy_set_header User-Agent $http_user_agent;
 
-        sub_filter_once off;
-        sub_filter_types *;
-        sub_filter 'static.airtable.com' 'example.com/static';
+        #proxy_ssl_server_name on;
+        #proxy_ssl_session_reuse off;
+
+        #sub_filter_once off;
+        #sub_filter_types *;
+        #sub_filter 'static.website.com' 'example.com/static';
     }
 
-    location /static/ {
-        try_files $uri $uri/ =404;
-        more_set_headers 'Access-Control-Allow-Origin: *';
+    location /example_dir/ {
+        #proxy_pass          https://static.website.com;
+        #try_files $uri $uri/ =404;
+        #more_set_headers 'Access-Control-Allow-Origin: *';
     }
 
 }
