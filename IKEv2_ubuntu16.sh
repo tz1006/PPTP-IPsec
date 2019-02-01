@@ -47,7 +47,7 @@ sudo ufw allow 1701
 #sudo ufw allow 1723
 #iptables -t nat -A POSTROUTING -s 10.99.1.0/24 -j MASQUERADE
 #iptables -t nat -A POSTROUTING -s 10.0.0.0/24 -j MASQUERADE
-
+ufw -f disable && ufw -f enable
 # Startup Script
 curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/rc.sh | bash 
 sed '3a iptables -t nat -A POSTROUTING -s 10.0.0.0/24 -j MASQUERADE' -i /etc/rc.local
