@@ -6,7 +6,7 @@
 
 # Prerequisites
 sudo apt-get update -y
-sudo apt-get install -y strongswan libstrongswan-standard-plugins letsencrypt
+sudo apt-get install -y strongswan libstrongswan-standard-plugins libstrongswan-extra-plugins letsencrypt
 
 # Disable AppArmor
 sudo systemctl stop apparmor
