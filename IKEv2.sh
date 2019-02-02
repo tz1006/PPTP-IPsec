@@ -45,6 +45,7 @@ sed -i '/net.ipv4.ip_forward/c net.ipv4.ip_forward = 1' /etc/sysctl.conf
 
 # Firewall
 #sudo iptables -X
+sudo ufw allow 22
 sudo ufw allow 53
 sudo ufw allow 80
 sudo ufw allow 500
