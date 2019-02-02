@@ -16,7 +16,7 @@ then
                    -n
 else
     # Ubuntu16 获取证书
-    sudo apt-get install -y certbot
+    sudo apt-get install -y letsencrypt
     wget https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem -O /etc/ipsec.d/cacerts/cacert.pem
     sudo letsencrypt certonly --standalone --agree-tos \
                    --email example@gmail.com \
