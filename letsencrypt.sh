@@ -6,7 +6,7 @@ service nginx stop
 OS_VERSION=$(lsb_release -r --short)
 VERSION=${OS_VERSION::2}
 
-sudp ufw allow 80
+sudo ufw allow 80
 
 if [ $VERSION == '18' ]
 then
