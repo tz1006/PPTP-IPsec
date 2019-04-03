@@ -25,11 +25,11 @@ IKEv2 Ubuntu16/18
 `curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/IKEv2_ubuntu.sh | bash`  
 
 ### IPsec默认设置 ###
-配置目录
-`/etc/ipsec.conf`
-`/etc/strongswan.d`
+配置目录  
+`/etc/ipsec.conf`  
+`/etc/strongswan.d`  
 账号密码目录  
-`/etc/ipsec.secrets`
+`/etc/ipsec.secrets`  
 ### 证书目录 ###
 ### 开启端口 ###
 80
