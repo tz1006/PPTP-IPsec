@@ -40,7 +40,7 @@ sed -i "s/example.com/$(hostname)/g" /etc/ipsec.conf
 sed -i "s/example.com/$(hostname)/g" /etc/ipsec.secrets
 
 # restart
-reboot
+#reboot
 #sudo service pptpd start
 #sudo sysv-rc-conf pptpd on
 #sudo service ipsec restart
