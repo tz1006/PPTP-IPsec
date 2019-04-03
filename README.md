@@ -1,38 +1,39 @@
-# PPTP-IPsec #
-PPTP和IPsec的配置文件以及一键安装脚本 for CentOS 6 在Vltur上完美测试
-*账号密码密钥默认都为vpn*
-## 安装方法 ##
-Let's Encrypt 证书   
-`curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/letsencrypt.sh | bash -s $(hostname)` 
+# Ubuntu 脚本 #
+初始化脚本
+`curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/init.sh | bash` 
+* update
+* rc启动脚本
+* 防火墙
+* ipv4 forward
 
+## Nginx ##
 Nginx 反向代理   
 `curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/nginx.sh | bash -s $(hostname) proxy.com` 
 
-IKEv2 Ubuntu18  
+Let's Encrypt 证书   
+`curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/letsencrypt.sh | bash -s $(hostname)` 
+
+## Ikev2 For Ubuntu16/18 ##
+*账号密码密钥默认都为vpn*
+### 安装方法 ###
+IKEv2 Ubuntu16/18  
 `curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/IKEv2_ubuntu.sh | bash`  
 
-IKEv2 Ubuntu16  
-`curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/IKEv2_ubuntu16.sh | bash`  
-
-### PPTP默认设置 ###
-账号密码目录  
-`/etc/ppp/chap-secrets`
-
 ### IPsec默认设置 ###
+配置目录
+`/etc/ipsec.conf`
+`/etc/strongswan.d`
 账号密码目录  
-`/etc/strongswan/ipsec.secrets`
-### iptables默认设置 ###
-iptables默认开启端口 
-22
+`/etc/ipsec.secrets`
+### 证书目录 ###
+### 开启端口 ###
 80
-443
 500
 4500
 1700
 1723
 eth0  
-编辑修改  
-`vi /etc/sysconfig/iptables`
 ### 其他信息 ###
-连接后无法联网修改文件  
 `/etc/sysctl.conf`
+`/etc/ppp/chap-secrets`
+
