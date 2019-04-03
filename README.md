@@ -1,5 +1,5 @@
 # Ubuntu 脚本 #
-初始化脚本
+初始化脚本  
 `curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/init.sh | bash` 
 * update
 * rc启动脚本
