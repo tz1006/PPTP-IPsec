@@ -36,7 +36,7 @@ sed -i "s/certbot/letsencrypt/g" /etc/ipsec.secrets
 
 
 # restart
-reboot
+#reboot
 #sudo service pptpd start
 #sudo sysv-rc-conf pptpd on
 #sudo service ipsec restart
