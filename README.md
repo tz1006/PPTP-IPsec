@@ -5,6 +5,11 @@
 * rc启动脚本
 * 防火墙
 * ipv4 forward
+* git ！
+* screen ！
+* python3 ！
+* vnc ！
+
 
 ## Nginx ##
 Nginx 反向代理   
