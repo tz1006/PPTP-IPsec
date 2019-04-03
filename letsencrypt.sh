@@ -27,7 +27,7 @@ else
                    -n
 fi
 
-wget https://raw.githubusercontent.com/certbot/certbot/master/certbot-nginx/certbot_nginx/options-ssl-nginx.conf -O /etc/letsencrypt/options-ssl-nginx.conf
+#wget https://raw.githubusercontent.com/certbot/certbot/master/certbot-nginx/certbot_nginx/options-ssl-nginx.conf -O /etc/letsencrypt/options-ssl-nginx.conf
 
 service nginx start
 
