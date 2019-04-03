@@ -9,7 +9,7 @@ Nginx 反向代理
 `curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/nginx.sh | bash -s $(hostname) proxy.com` 
 
 IKEv2 Ubuntu18  
-`curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/IKEv2.sh | bash`  
+`curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/IKEv2_ubuntu.sh | bash`  
 
 IKEv2 Ubuntu16  
 `curl -s https://raw.githubusercontent.com/tz1006/PPTP-IPsec/master/IKEv2_ubuntu16.sh | bash`  
