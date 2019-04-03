@@ -5,6 +5,8 @@
 * rc启动脚本
 * 防火墙
 * ipv4 forward
+
+* wget !
 * git ！
 * screen ！
 * python3 ！
