@@ -5,7 +5,7 @@ OS_VERSION=$(lsb_release -r --short)
 VERSION=${OS_VERSION::2}
 if [ $VERSION == '18' ]
 then
-   bash
+   echo '18'
 else
-   bash
+   echo '16'
 fi
